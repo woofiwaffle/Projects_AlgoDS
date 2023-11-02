@@ -2,6 +2,9 @@
 #define PROJECTS_ALGODS_QUICKSORT_H
 
 #include "D_Array.h"
+#include <iostream>
+
+using namespace std;
 
 class Quicksort {
 private:
@@ -9,7 +12,7 @@ private:
     static void utilQuicksort(int* arr, int low, int high);
 
 public:
-    static void quicksort(DynamicArray &dynamicArray);
+    static void quicksort(DynamicArray& dynamicArray);
 };
 
 

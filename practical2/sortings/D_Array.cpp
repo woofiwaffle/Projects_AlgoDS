@@ -1,7 +1,4 @@
 #include "D_Array.h"
-#include <iostream>
-
-using namespace std;
 
 
 
@@ -30,7 +27,7 @@ void DynamicArray::createArrayRandom(int n) {
     }
     size = n;
     for(int i = 0; i < size; i++){
-        arr[i] = rand() % 199 - 99;
+        arr[i] = rand() % 10000 - 5000;
     }
 }
 

@@ -1,6 +1,10 @@
 #ifndef PROJECTS_ALGODS_D_ARRAY_H
 #define PROJECTS_ALGODS_D_ARRAY_H
 
+#include <iostream>
+
+using namespace std;
+
 class DynamicArray {
 private:
     int *arr;

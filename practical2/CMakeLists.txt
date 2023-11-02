@@ -12,4 +12,5 @@ add_executable(practical2
         sortings/Timsort.cpp
         sortings/Timsort.h
         sortings/Quicksort.cpp
-        sortings/Quicksort.h)
+        sortings/Quicksort.h
+)

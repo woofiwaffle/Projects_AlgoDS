@@ -1,5 +1,4 @@
 #include "Quicksort.h"
-#include <iostream>
 
 
 int Quicksort::part(int* arr, int low, int high) {
@@ -9,10 +8,10 @@ int Quicksort::part(int* arr, int low, int high) {
     for(int j = low; j <= high - 1; j++){
         if(arr[j] < pivot){
             i++;
-            std::swap(arr[i], arr[j]);
+            swap(arr[i], arr[j]);
         }
     }
-    std::swap(arr[i + 1], arr[high]);
+    swap(arr[i + 1], arr[high]);
     return (i + 1);
 }
 

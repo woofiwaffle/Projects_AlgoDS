@@ -1,8 +1,4 @@
 #include "Timsort.h"
-#include <algorithm>
-
-const int MIN_RUN = 64;
-
 
 
 int Timsort::Getminrun(int n){
@@ -30,7 +26,7 @@ void Timsort::insertSort(int* arr, int left, int right) {
 
 
 
-void Timsort::merge(int* arr, int lf, int mid, int rght) {
+void Timsort::merge(int* arr, int lf, int mid, int rght){
     int length1 = mid - lf + 1;
     int length2 = rght - mid;
 
@@ -41,25 +37,44 @@ void Timsort::merge(int* arr, int lf, int mid, int rght) {
         left[i] = arr[lf + i];
     }
     for(int i = 0; i < length2; i++){
-        right[i] = arr[mid + 1 + i];
+        right[i] = arr[mid + i + 1];
     }
+
     int i = 0, j = 0, k = lf;
+
     while(i < length1 && j < length2){
         if(left[i] <= right[j]){
+            int gallopInd = 0;
+            while(j + gallopInd < length2 && left[i] > right[j + gallopInd]){
+                gallopInd = gallopInd * 2 + 1;
+            }
+            gallopInd = std::min(gallopInd, length2 - j);
+            while(gallopInd > 0){
+                arr[k++] = right[j++];
+                gallopInd--;
+            }
             arr[k++] = left[i++];
         }
         else{
+            int gallopInd = 0;
+            while(i + gallopInd < length1 && right[j] >= left[i + gallopInd]){
+                gallopInd = gallopInd * 2 + 1;
+            }
+            gallopInd = std::min(gallopInd, length1 - i);
+            while(gallopInd > 0){
+                arr[k++] = left[i++];
+                gallopInd--;
+            }
             arr[k++] = right[j++];
         }
     }
-
     while(i < length1){
         arr[k++] = left[i++];
     }
-
     while(j < length2){
         arr[k++] = right[j++];
     }
+
     delete[] left;
     delete[] right;
 }
@@ -67,23 +82,30 @@ void Timsort::merge(int* arr, int lf, int mid, int rght) {
 
 
 void Timsort::utilTimsort(int* arr, int n) {
+
     int minrun = Getminrun(n);
 
     for(int i = 0; i < n; i += minrun){
-        insertSort(arr, i, std::min(i + minrun - 1, n - 1));
+        insertSort(arr, i, std::min((i + minrun - 1), (n - 1)));
     }
 
     for(int size = minrun; size < n; size = 2 * size){
         for(int left = 0; left < n; left += 2 * size){
             int mid = left + size - 1;
             int right = std::min((left + 2 * size - 1), (n - 1));
-            merge(arr, left, mid, right);
+
+            if(mid < right){
+                merge(arr, left, mid, right);
+            }
         }
+
     }
 }
 
 
 
-void Timsort::timsort(DynamicArray &dynamicArray) {
-    utilTimsort(dynamicArray.getArray(), dynamicArray.getSize());
+void Timsort::timsort(DynamicArray& dynamicArray) {
+    int* arr = dynamicArray.getArray();
+    int n = dynamicArray.getSize();
+    utilTimsort(arr, n);
 }
