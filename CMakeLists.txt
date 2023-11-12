@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(practical1)
 add_subdirectory(practical2)
+add_subdirectory(practical3)
