@@ -8,7 +8,7 @@
 
 1. practical1 --- Structures. Reverse Polish notation 
 2. practical2 --- TimSort. Quick sort
-3. practical3 ---
+3. practical3 --- Binary tree. AVL Tree
 4. practical4 ---
 5. 
  
