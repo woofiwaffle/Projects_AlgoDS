@@ -6,11 +6,7 @@
 
 ## About
 
-1. practical1 --- Structures. Reverse Polish notation 
-2. practical2 --- TimSort. Quick sort
-3. practical3 --- Binary tree. AVL Tree
-4. practical4 ---
-5. 
+Sorting. Implement Timsort sorting. The implementation must fulfill all the main elements of the algorithm: insertion sort, search for run sequences, counting minrun, merging run sequences, gallop mode during merging.
  
  ## Developer
 
