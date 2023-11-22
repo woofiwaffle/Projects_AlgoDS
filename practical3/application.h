@@ -5,7 +5,8 @@ class application {
 public:
     int exec();
 private:
-    int menu();
+    int menu1();
+    int menu2();
 };
 
 #endif //PROJECTS_ALGODS_APPLICATION_H

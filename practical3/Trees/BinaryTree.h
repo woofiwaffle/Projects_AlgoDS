@@ -2,37 +2,42 @@
 #define PROJECTS_ALGODS_BINARYTREE_H
 
 #include <iostream>
-#include <cstdlib>
-#include <fstream>
+#include <string>
 #include <vector>
+#include <stack>
+#include <fstream>
 
 using namespace std;
 
+struct BinaryTreeNode {
+    int data;
+    BinaryTreeNode* left;
+    BinaryTreeNode* right;
+
+    BinaryTreeNode(int value) : data(value), left(nullptr), right(nullptr) {};
+};
+
+
 class BinaryTree {
 public:
-    struct BinTree {
-        int key;
-        BinTree* left;
-        BinTree* right;
+    BinaryTree();
+    ~BinaryTree();
 
-        BinTree(int value){
-            key = value;
-            left = nullptr;
-            right = nullptr;
-        }
-    };
+    void parseTree(const string& expression);
+    void printBinaryTree();
+    void createBinaryTreeFromFile(const string& filename);
+    void bypassDirect();
 
-    BinTree* insertNode(BinTree* root, int value);
-    BinTree* createTree(const vector<int>& array);
-    BinTree searchNode(BinTree* root, int value);
-    BinTree* findMinimum(BinTree* node);
-    BinTree* deleteNode(BinTree* root, int value);
-    void printBinaryTree(BinTree* root, string indent = "", bool isleft = false);
-    void writeBinaryTree(BinTree* root, ofstream& outFile, string indent, bool isLeft);
-    void writeOperations(BinTree* root, const string& filename, int insertedValue, int deletedValue, int searchValue);
-    void bypassDirect(BinTree* root);
-    void bypassReverse(BinTree* root);
-    void bypassSymmetrical(BinTree* root);
+    void array(BinaryTreeNode* root, vector<int>& arrayNum);
+    [[nodiscard]] BinaryTreeNode* getRoot() const;
+
+private:
+    BinaryTreeNode* root;
+
+    void deleteBinaryTree(BinaryTreeNode* tree);
+    BinaryTreeNode* parseExpression(const string& expression, size_t& pos);
+    void printBinaryTree(BinaryTreeNode* tree, string indent, bool isLeft);
+    void bypassDirect(BinaryTreeNode* tree);
 };
 
 

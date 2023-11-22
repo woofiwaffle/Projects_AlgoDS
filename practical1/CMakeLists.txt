@@ -13,12 +13,4 @@ add_executable(practical1 main.cpp
         application.cpp
         application.h
         RPN/RPN.cpp
-        RPN/RPN.h
-        ../practical2/sortings/D_Array.cpp
-        ../practical2/sortings/D_Array.h
-        ../practical2/sortings/Quicksort.cpp
-        ../practical2/sortings/Quicksort.h
-        ../practical2/sortings/Timsort.cpp
-        ../practical2/sortings/Timsort.h
-        ../practical2/application.cpp
-        ../practical2/application.h)
+        RPN/RPN.h)

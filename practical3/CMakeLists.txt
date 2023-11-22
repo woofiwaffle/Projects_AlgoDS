@@ -7,7 +7,8 @@ add_executable(practical3
         main.cpp
         application.cpp
         application.h
-        Trees/BinaryTree.cpp
-        Trees/BinaryTree.h
+        Trees/AVLTree.h
         Trees/AVLTree.cpp
-        Trees/AVLTree.h)
+        Trees/BinaryTree.h
+        Trees/BinaryTree.cpp
+)

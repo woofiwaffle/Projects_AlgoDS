@@ -1,6 +1,6 @@
 #include "application.h"
 
-int main(){
+int main(){ // 👷🏼‍
 
     application a;
 
