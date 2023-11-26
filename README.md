@@ -6,10 +6,10 @@
 
 ## About
 
-1. practical1 --- Structures. Reverse Polish notation 
-2. practical2 --- TimSort. Quick sort
-3. practical3 --- Binary tree. AVL Tree
-4. coursework --- Graphs
+1. coursework --- Kruskal's algorithm
+2. practical1 --- Structures. Reverse Polish notation 
+3. practical2 --- TimSort. Quick sort
+4. practical3 --- Binary tree. AVL Tree
  
  ## Developer
 
