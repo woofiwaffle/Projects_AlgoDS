@@ -1,4 +1,5 @@
 #include "application.h"
+#include "KruskalsAlgorithm/KruskalsAlgorithm.h"
 
 #include <iostream>
 
@@ -13,15 +14,11 @@ int application::exec() {
         ch = menu();
         switch(ch){
             case '1':{
-                break;
-            }
-            case '2':{
-                break;
-            }
-            case '3':{
-                break;
-            }
-            case '4': {
+                KruskalsAlgorithm KruskalsAlgorithm("C:\\Users\\User\\CLionProjects\\Projects_AlgoDS\\coursework\\KruskalsAlgorithm\\inputgraph.txt",
+                                                    "C:\\Users\\User\\CLionProjects\\Projects_AlgoDS\\coursework\\KruskalsAlgorithm\\outputMST.txt");
+                KruskalsAlgorithm.sortEdges();
+                KruskalsAlgorithm.kruskal();
+                KruskalsAlgorithm.outputInFile();
                 break;
             }
             case '0':{
@@ -42,11 +39,11 @@ int application::exec() {
 int application::menu(){
     char ch;
     cout << "--------------------------------------------" << endl;
+    cout << "-----------------------\n";
+    cout << "| Kruskal`s algorithm |\n";
+    cout << "-----------------------\n";
     cout << "|Choose the method" << endl;
-    cout << "|1 - Doubly Linked List" << endl;
-    cout << "|2 - Dynamic Array" << endl;
-    cout << "|3 - Stack" << endl;
-    cout << "|4 - Reverse Polish Notation" << endl;
+    cout << "|1 - Enter graph from file" << endl;
     cout << "|0 - Exit" << endl << "> ";
     cin >> ch;
     cin.ignore();

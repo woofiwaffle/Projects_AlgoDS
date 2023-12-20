@@ -1,0 +1,4 @@
+Minimum Spanning Tree:
+A C
+B C
+Total weight: 3
