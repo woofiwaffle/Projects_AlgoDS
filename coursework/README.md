@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src = "https://img.shields.io/badge/Qt_Creator-5.0.2-41CD52?style=plastic&logo=Qt&labelColor=black" alt = "Qt Version">
+  <img src = "https://img.shields.io/badge/Engine-CLion%202023.2.1-green" alt = "CLion Version">
 </p>
 
 # LETI algorithms and data structures
