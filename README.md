@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src = "https://img.shields.io/badge/Engine-CLion%202023.2.1-green" alt = "CLion Version">
+  <img alt="CLion" src="https://img.shields.io/badge/CLion-2023.2.1-green?style=plastic&logo=clion&logoColor=green&labelColor=black&color=grey">
 </p>
 
 # LETI algorithms and data structures
