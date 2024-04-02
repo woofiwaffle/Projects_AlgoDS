@@ -30,6 +30,3 @@ Maximum input size: 50 vertices. Vertices can be specified by any text sequence 
 * Report based on the template https://etu.ru/assets/files/3004_3_ShABLON-kursovika.doc with a description of the selected sorting algorithms, graph traversal and CHM.
 * When defending your course work, you must answer any 3 questions about the program code or algorithms described in the report.
  
- ## Developer
-
-*  [woofiwaffle](https://github.com/woofiwaffle)
