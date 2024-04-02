@@ -10,7 +10,3 @@
 2. practical1 --- Structures. Reverse Polish notation 
 3. practical2 --- TimSort. Quick sort
 4. practical3 --- Binary tree. AVL Tree
- 
- ## Developer
-
-*  [woofiwaffle](https://github.com/woofiwaffle)
