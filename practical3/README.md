@@ -16,7 +16,3 @@ Showcase:
 2. Step 1 either creates a binary tree or reports an error (wrong symbols, incorrect parentheses, not a binary tree at all, etc.).
 3. Traverse the resulting tree and create an AVL (or CC) tree.
 4. Demonstrate the output of all nodes in 4 ways: wide and 3 deep.
- 
- ## Developer
-
-*  [woofiwaffle](https://github.com/woofiwaffle)
