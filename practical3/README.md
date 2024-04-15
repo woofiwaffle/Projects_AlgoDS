@@ -1,10 +1,4 @@
-<p align = "center">
-  <img src = "https://img.shields.io/badge/Engine-CLion%202023.2.1-green" alt = "CLion Version">
-</p>
-
-# LETI algorithms and data structures
-
-## About
+# Task
 
 Trees. Implement:
 1. A regular binary tree (not searching or balancing) with a depth-first traversal of this tree (the direction of the traversal is not important, the traversal is done through recursion).
